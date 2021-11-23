@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if family %}
+    <h1>{{ family.name }} Family</h1>
+    {% for animal in animals %}
+        <ul>
+            {% for key, value in animal.items %}
+
+        <li>{{ key }} : {{ value }}</li>
+
+            {% endfor %}
+    </ul>
+    {% endfor %}
+
+{% else %}
+    <h1>no family by that id found</h1>
+{% endif %}
+
+</body>
+</html>
